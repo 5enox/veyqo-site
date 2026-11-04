@@ -1,0 +1,109 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catalogue audit — see what your shop is hiding</title>
+<meta name="description" content="Paste your shop domain and get a free, instant read of your public product feed: sold-out variants, part-stocked products, missing SKUs and images. No signup.">
+<link rel="canonical" href="https://veyqo.clawpyr.com/audit">
+<style>
+:root{--paper:#f4f3eb;--ink:#20261f;--muted:#5e645a;--line:#cdd0c2;--accent:#1c4a38;--mono:'Courier New',monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.wrap{width:min(920px,92%);margin:auto;padding:44px 0 70px}
+header{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:13px;gap:16px;flex-wrap:wrap}
+.logo{font-size:22px;font-weight:800;letter-spacing:-1.3px;text-decoration:none;color:inherit}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(30px,5vw,50px);letter-spacing:-1.8px;line-height:1.03;margin:34px 0 12px;font-weight:600}
+h1 em{font-style:italic;color:var(--accent);font-weight:500}
+p.lead{max-width:60ch;line-height:1.62;color:#3c443c;margin:0 0 26px}
+form{display:flex;gap:10px;flex-wrap:wrap;align-items:stretch;margin-bottom:8px}
+input[type=text]{flex:1 1 300px;min-width:0;padding:15px 16px;border:1px solid var(--ink);background:#fbfbf6;font:inherit;font-size:16px;color:inherit}
+input[type=text]:focus{outline:2px solid var(--accent);outline-offset:1px}
+button{background:var(--accent);color:#f7f8ef;border:0;padding:15px 24px;font-family:var(--mono);font-size:12.5px;letter-spacing:.6px;cursor:pointer}
+button[disabled]{opacity:.55;cursor:progress}
+.hint{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.3px;margin:0 0 26px}
+#out{margin-top:10px}
+.state{font-family:var(--mono);font-size:12.5px;color:var(--muted);padding:14px 0}
+.err{border:1px solid #b4553a;background:#fbf3ee;padding:16px 18px;font-size:14px;line-height:1.6;color:#7a3520}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:18px 0 26px}
+.stat{background:#fbfbf6;padding:15px}
+.stat b{display:block;font-size:27px;letter-spacing:-1.1px;font-weight:600;margin-bottom:2px}
+.stat span{font-family:var(--mono);font-size:10px;letter-spacing:.9px;text-transform:uppercase;color:var(--muted)}
+h2{font-size:18px;letter-spacing:-.3px;margin:30px 0 10px;font-weight:600}
+table{width:100%;border-collapse:collapse;background:#fbfbf6;border:1px solid var(--line)}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);font-size:13.5px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--ink)}
+tr:last-child td{border-bottom:0}
+.mono{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.cta{margin-top:30px;border:1px solid var(--ink);background:#fbfbf6;padding:24px}
+.cta h2{margin:0 0 8px}.cta p{margin:0 0 14px;line-height:1.6;font-size:14.5px;color:#3c443c;max-width:60ch}
+a.btn{display:inline-block;background:var(--accent);color:#f7f8ef;text-decoration:none;padding:13px 20px;font-family:var(--mono);font-size:12.5px;letter-spacing:.5px}
+.note{margin-top:22px;font-size:12.5px;line-height:1.7;color:var(--muted);max-width:74ch}
+footer{margin-top:38px;border-top:1px solid var(--line);padding-top:14px;font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+a{color:var(--accent)}
+</style></head><body><div class="wrap">
+<header><a class="logo" href="/">veyqo</a><span class="eyebrow">Free · no signup · runs once</span></header>
+<h1>See what your shop is <em>hiding</em>.</h1>
+<p class="lead">Paste a store domain. I read its public product feed exactly as a customer's browser does, and count what is unbuyable right now: sold-out sizes, part-empty bundles, products missing a SKU or an image.</p>
+<form id="f" autocomplete="off">
+  <input id="d" type="text" name="domain" placeholder="yourstore.com" aria-label="Store domain" spellcheck="false">
+  <button id="go" type="submit">Run the audit</button>
+</form>
+<p class="hint">Works on stores that publish /products.json (Shopify and friends). Nothing is stored, nothing is emailed.</p>
+<div id="out"></div>
+<div class="cta" id="offer" hidden>
+  <h2>Want this every week, without asking</h2>
+  <p>The paid version reads the same feed on a schedule and drops it into a Google Sheet: every variant, price, availability, and a diff against last run, with the product URL on each row so nothing has to be hunted down.</p>
+  <p class="mono" style="font-family:var(--mono);font-size:12.5px"><b>$49</b> to build the first one · <b>$19/month</b> to keep it running · cancel by replying stop</p>
+  <a class="btn" href="mailto:afritit.abdelghafour@gmail.com?subject=Catalogue%20watch%20for%20my%20store">Ask for mine</a>
+</div>
+<p class="note">How it is counted: every product in the public feed, every variant, using the feed's own <code>available</code> flag. Barcodes are not exposed by this endpoint, so nothing here claims anything about GTINs. Feeds are read live, up to 1,500 products.</p>
+<footer><span>veyqo · custom public-web data workflows</span><span><a href="/hiring/london-assistants">the hiring index</a></span></footer>
+</div>
+<script>
+const f = document.getElementById('f'), d = document.getElementById('d'), go = document.getElementById('go'),
+      out = document.getElementById('out'), offer = document.getElementById('offer');
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const messages = {
+  'bad-domain': 'That does not look like a domain. Try something like yourstore.com.',
+  'HTTP 404': 'That store does not publish /products.json, or the path is different. Not every platform exposes it.',
+  'not-json': 'That address answered, but not with a product feed.',
+  'no-products': 'The feed opened but contained no products.',
+  'empty-feed': 'The feed is empty, so there is nothing to count.',
+  'timeout': 'The store took too long to answer. Try again in a moment.',
+  'fetch-failed': 'Could not reach that store.',
+  'too-large': 'That feed is too large to read in one go.',
+};
+f.addEventListener('submit', async e => {
+  e.preventDefault();
+  const dom = d.value.trim();
+  if (!dom) return;
+  go.disabled = true;
+  offer.hidden = true;
+  out.innerHTML = '<p class="state">Reading the feed…</p>';
+  try {
+    const r = await fetch('/api/audit?domain=' + encodeURIComponent(dom));
+    const j = await r.json();
+    if (!r.ok || j.error) {
+      out.innerHTML = '<div class="err">' + esc(messages[j.error] || ('Could not audit that store (' + (j.error || r.status) + ').')) + '</div>';
+      return;
+    }
+    const rows = (j.partStockedTop || []).map(p =>
+      '<tr><td>' + esc(p.title) + '</td><td class="mono">' + p.variants + '</td><td class="mono">' + p.unavailable + '</td><td class="mono">' + (p.price ? '£' + p.price : '—') + '</td></tr>').join('');
+    const outRows = (j.fullyOutTop || []).map(p => '<li>' + esc(p.title) + '</li>').join('');
+    out.innerHTML =
+      '<div class="stats">' +
+        '<div class="stat"><b>' + j.products.toLocaleString() + '</b><span>products</span></div>' +
+        '<div class="stat"><b>' + j.unavailablePct + '%</b><span>variants unavailable</span></div>' +
+        '<div class="stat"><b>' + j.fullyOut.toLocaleString() + '</b><span>fully out of stock</span></div>' +
+        '<div class="stat"><b>' + j.missingSkuPct + '%</b><span>variants with no SKU</span></div>' +
+      '</div>' +
+      (rows ? '<h2>Where the range has holes</h2><table><thead><tr><th>Product</th><th>Variants</th><th>Unavailable</th><th>From</th></tr></thead><tbody>' + rows + '</tbody></table>' : '') +
+      (outRows ? '<h2>Out of stock at every size</h2><ul class="mono" style="line-height:1.9">' + outRows + '</ul>' : '') +
+      '<p class="hint" style="margin-top:14px">' + j.products.toLocaleString() + ' products · ' + j.variants.toLocaleString() + ' variants · feed read ' + j.measuredAt.slice(0, 10) + (j.truncated ? ' · first 1,500 products only' : '') + '</p>';
+    offer.hidden = false;
+  } catch (err) {
+    out.innerHTML = '<div class="err">The audit request failed. Try again.</div>';
+  } finally {
+    go.disabled = false;
+  }
+});
+</script>
+</body></html>

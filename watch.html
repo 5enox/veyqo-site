@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Watch — the market moves while you sleep</title>
+<meta name="description" content="A weekly watch on your competitors: prices, stock and catalogue changes, collected from public pages and delivered as one sheet with a source link on every row. $49/month.">
+<link rel="canonical" href="https://veyqo.clawpyr.com/watch">
+<meta property="og:title" content="Watch — the market moves while you sleep">
+<meta property="og:description" content="Weekly price, stock and catalogue watch on the competitors you name. One sheet, source on every row. $49/month.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://veyqo.clawpyr.com/assets/poster-watch.jpg">
+<style>
+:root{--paper:#f4f3eb;--ink:#20261f;--muted:#5e645a;--line:#cdd0c2;--accent:#1c4a38;--lime:#c8d92e;--mono:'Courier New',monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.wrap{width:min(1080px,92%);margin:auto;padding:40px 0 64px}
+header{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:13px;gap:16px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:800;letter-spacing:-1.3px;text-decoration:none;color:inherit}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(34px,5.4vw,62px);letter-spacing:-2.2px;line-height:1.0;margin:34px 0 14px;font-weight:600}
+h1 em{font-style:italic;color:var(--accent);font-weight:500}
+p.lead{max-width:58ch;line-height:1.62;color:#3c443c;font-size:17px;margin:0 0 26px}
+.player{position:relative;max-height:520px;overflow:hidden;border:1px solid var(--line);background:#fbfbf6}
+.player video{width:100%;height:auto;display:block}
+.play{position:absolute;left:24px;bottom:24px;background:var(--accent);color:#f7f8ef;border:0;padding:14px 20px;font-family:var(--mono);font-size:12.5px;letter-spacing:.6px;cursor:pointer}
+.play:hover{background:#16402f}
+.caption{font-family:var(--mono);font-size:11.5px;letter-spacing:.4px;color:var(--muted);margin:8px 0 30px}
+h2{font-size:21px;letter-spacing:-.5px;margin:38px 0 12px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:14px 0 8px}
+.cell{background:#fbfbf6;padding:18px 16px}
+.cell b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.cell p{margin:0;font-size:14.5px;line-height:1.6;color:#3c443c}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 6px}
+.shots img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.cta{margin-top:34px;border:1px solid var(--ink);background:#fbfbf6;padding:26px}
+.cta h2{margin:0 0 8px}
+.cta p{margin:0 0 16px;line-height:1.6;color:#3c443c;max-width:62ch;font-size:15px}
+a.btn{display:inline-block;background:var(--accent);color:#f7f8ef;text-decoration:none;padding:14px 22px;font-family:var(--mono);font-size:12.5px;letter-spacing:.6px}
+a.btn.alt{background:transparent;color:var(--accent);border:1px solid var(--accent);margin-left:10px}
+.price{font-family:var(--mono);font-size:13px;color:var(--accent);margin:0 0 14px}
+.note{margin-top:24px;font-size:12.5px;line-height:1.7;color:var(--muted);max-width:76ch}
+footer{margin-top:38px;border-top:1px solid var(--line);padding-top:14px;font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+a{color:var(--accent)}
+@media(max-width:640px){.shots{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<header><a class="logo" href="/">veyqo</a><nav class="eyebrow"><a href="/hiring/london-assistants" style="text-decoration:none;color:inherit">Hiring index</a> · <a href="/samples/" style="text-decoration:none;color:inherit">Samples</a></nav></header>
+
+<h1>The market moves while <em>you sleep</em>.</h1>
+<p class="lead">Name the competitors that matter and the products you care about. Every Monday you get one sheet: your price, theirs, the gap, and what changed since last week. Collected from public pages, with a source link on every row so nobody has to take it on faith.</p>
+
+<div class="player" id="player">
+  <video id="vid" src="/veyqo-20s-web.mp4" poster="/assets/poster-watch.jpg" playsinline preload="metadata" aria-label="Veyqo: public pages turned into one sheet"></video>
+  <button class="play" id="play" aria-label="Play the 19 second film"><span aria-hidden="true">▶</span> Play the film</button>
+</div>
+<p class="caption">19 seconds · what the service does, without a sales deck</p>
+
+<h2>Why this is a job for a machine</h2>
+<div class="grid">
+  <div class="cell"><b>The work</b><p>Checking 40 products across five competitors takes an afternoon. Doing it every Monday means it never gets done.</p></div>
+  <div class="cell"><b>The breakage</b><p>Prices change silently. A rival drops 15% on your best seller and you learn about it from a customer.</p></div>
+  <div class="cell"><b>The gap</b><p>Your own admin shows your prices. It never shows theirs, their stock, or the range they added last week.</p></div>
+</div>
+
+<h2>What lands in the sheet</h2>
+<div class="grid">
+  <div class="cell"><b>Every row</b><p>Product, competitor, their price, your price, the difference, whether they have stock, and the URL it came from.</p></div>
+  <div class="cell"><b>Every week</b><p>A change column: what moved since the last run, sorted so the biggest undercuts are at the top.</p></div>
+  <div class="cell"><b>Every format</b><p>Google Sheet shared to your address, with a CSV copy. No dashboard to learn, no login to forget.</p></div>
+</div>
+
+<div class="shots">
+  <img src="/assets/poster-watch.jpg" alt="A watch list with two price columns and a delta column">
+  <img src="/assets/poster-deliverable.jpg" alt="A web page on the left, an extract arrow, and a clean table on the right">
+</div>
+
+<div class="cta">
+  <h2>Start with one competitor</h2>
+  <p>Send the competitor URLs and the 20 products you care about. The first week is free so you can check the data against your own screen. After that it is $49 a month, cancel by replying stop.</p>
+  <p class="price">$49 / month · one watch list · first week free · no contract</p>
+  <a class="btn" href="mailto:afritit.abdelghafour@gmail.com?subject=Watch%20list%20%C2%B7%20my%20competitors&body=Competitors%20(URLs)%3A%20%0AProducts%20I%20care%20about%3A%20%0AWhere%20to%20send%20the%20sheet%3A%20">Send my competitor list</a>
+  <a class="btn alt" href="/for/petprice">See a real comparison</a>
+</div>
+
+<h2>Questions people actually ask</h2>
+<div class="grid">
+  <div class="cell"><b>What if a competitor blocks me?</b><p>I check before you pay. If a site resists automated reads, I say so and build the watch on the sources that stay accessible, rather than selling you a list that quietly fills with blanks.</p></div>
+  <div class="cell"><b>How do I get the sheet?</b><p>Shared straight to your Google address, with a CSV copy. Nothing to install and no dashboard to learn.</p></div>
+  <div class="cell"><b>What if it is not useful?</b><p>The first week is free. After that, one email cancels it. No contract and no notice period.</p></div>
+</div>
+
+<p class="note">Where the data comes from: the public product pages and feeds of the shops you name, read on a schedule. No logins, no private data, no customer information. If a competitor blocks automated reads, that is disclosed before you pay rather than after, and the watch is built on the sources that stay accessible. Figures in the video are illustrations of the format, not customer results.</p>
+<footer><span>veyqo · custom public-web data workflows</span><span>Updated 4 Nov 2026</span></footer>
+</div><script>
+(()=>{const v=document.getElementById('vid'),b=document.getElementById('play');
+if(!v||!b)return;
+b.addEventListener('click',()=>{v.controls=true;v.play();b.hidden=true;});
+v.addEventListener('pause',()=>{if(v.currentTime===0)b.hidden=false;});
+})();
+</script>
+</body></html>

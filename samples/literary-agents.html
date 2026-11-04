@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Veyqo sample — UK literary agency directory extract</title>
+<style>
+:root{--paper:#f4f3eb;--ink:#20261f;--muted:#5e645a;--line:#cdd0c2;--accent:#1c4a38;--mono:'Courier New',monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.wrap{width:min(1100px,92%);margin:auto;padding:48px 0 64px}
+header{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:14px;gap:16px;flex-wrap:wrap}
+.logo{font-size:24px;font-weight:800;letter-spacing:-1.4px;text-decoration:none;color:inherit}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(30px,4.4vw,46px);letter-spacing:-1.6px;line-height:1.05;margin:32px 0 12px;font-weight:600}
+p.lead{max-width:64ch;line-height:1.6;color:#3c443c;margin:0 0 26px}
+.meta{display:flex;gap:26px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:22px}
+table{width:100%;border-collapse:collapse;background:#fbfbf6;border:1px solid var(--line)}
+caption{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:0 0 10px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--ink)}
+tr:last-child td{border-bottom:0}
+code{font-family:var(--mono);font-size:12.5px;background:#e9eade;padding:2px 5px;border-radius:3px;word-break:break-all}
+a{color:var(--accent)}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{min-width:0}
+.note{margin-top:26px;font-size:13px;line-height:1.7;color:var(--muted);max-width:70ch}
+.note strong{color:var(--ink)}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.6px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:640px){th:nth-child(2),td:nth-child(2),th:nth-child(4),td:nth-child(4){display:none}th,td{padding:10px 9px;font-size:13px}}
+</style></head><body><div class="wrap">
+<header><a class="logo" href="/">veyqo</a><span class="eyebrow">Sample output · not a client deliverable</span></header>
+<h1>Public literary agency directory, extracted.</h1>
+<p class="lead">Ten UK and US literary agencies collected from their own public submissions pages, with the publicly listed contact address and the exact source page for each row. This is the shape of deliverable Veyqo produces; the columns change with your brief.</p>
+<div class="meta"><span>Rows: 10</span><span>Fields: 5</span><span>Collected: 3 Nov 2026</span><span>Format: Sheets / CSV</span></div>
+<div class="table-wrap"><table><caption>Sample extract · public business information only</caption>
+<thead><tr><th>Agency</th><th>Location</th><th>Public submissions contact</th><th>Website</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>Watson, Little Ltd</td><td>London, UK</td><td><code>submissions@watsonlittle.com</code></td><td><a href='https://www.watsonlittle.com/About' rel='noopener'>www.watsonlittle.com/About</a></td><td><a href='https://www.watsonlittle.com/About' rel='noopener'>source</a></td></tr>
+<tr><td>Madeleine Milburn Literary, TV & Film Agency</td><td>London, UK</td><td><code>submissions@madeleinemilburn.com</code></td><td><a href='https://www.madeleinemilburn.co.uk/submissions/' rel='noopener'>www.madeleinemilburn.co.uk/submissio</a></td><td><a href='https://www.madeleinemilburn.co.uk/submissions/' rel='noopener'>source</a></td></tr>
+<tr><td>David Higham Associates</td><td>London, UK</td><td><code>submissions@davidhigham.co.uk</code></td><td><a href='https://davidhigham.co.uk/submissions' rel='noopener'>davidhigham.co.uk/submissions</a></td><td><a href='https://davidhigham.co.uk/submissions' rel='noopener'>source</a></td></tr>
+<tr><td>RCW Literary Agency</td><td>London, UK</td><td><code>via agency contact page</code></td><td><a href='https://rcwlitagency.com/submissions' rel='noopener'>rcwlitagency.com/submissions</a></td><td><a href='https://rcwlitagency.com/submissions' rel='noopener'>source</a></td></tr>
+<tr><td>Aitken Alexander Associates</td><td>London, UK</td><td><code>via agency submissions page</code></td><td><a href='https://aitkenalexander.co.uk/submissions' rel='noopener'>aitkenalexander.co.uk/submissions</a></td><td><a href='https://aitkenalexander.co.uk/submissions' rel='noopener'>source</a></td></tr>
+<tr><td>The Soho Agency</td><td>London, UK</td><td><code>sohoagencysubmissions@gmail.com</code></td><td><a href='https://thesohoagency.co.uk/literary-submissions' rel='noopener'>thesohoagency.co.uk/literary-submiss</a></td><td><a href='https://thesohoagency.co.uk/literary-submissions' rel='noopener'>source</a></td></tr>
+<tr><td>Darley Anderson Literary Agency</td><td>London, UK</td><td><code>via agency form</code></td><td><a href='https://darleyanderson.com/submissions' rel='noopener'>darleyanderson.com/submissions</a></td><td><a href='https://darleyanderson.com/submissions' rel='noopener'>source</a></td></tr>
+<tr><td>Trident Media Group</td><td>New York, US</td><td><code>via agency submissions page</code></td><td><a href='https://tridentmediagroup.com/submissions' rel='noopener'>tridentmediagroup.com/submissions</a></td><td><a href='https://tridentmediagroup.com/submissions' rel='noopener'>source</a></td></tr>
+<tr><td>CAA Books (UK submissions)</td><td>London, UK</td><td><code>UKBookSubmissions@caa.com</code></td><td><a href='https://www.caa.com/entertainmenttalent/books' rel='noopener'>www.caa.com/entertainmenttalent/book</a></td><td><a href='https://www.caa.com/entertainmenttalent/books' rel='noopener'>source</a></td></tr>
+<tr><td>Reedsy agent directory</td><td>Worldwide</td><td><code>per-agent, listed individually</code></td><td><a href='https://reedsy.com/resources/literary-agents/' rel='noopener'>reedsy.com/resources/literary-agents</a></td><td><a href='https://reedsy.com/resources/literary-agents/' rel='noopener'>source</a></td></tr>
+</tbody></table></div>
+<p class="note"><strong>Scope notes.</strong> Every row comes from the agency's own public page. Nothing was guessed or enriched from a private database, and where an agency only accepts submissions through a form the row says so instead of inventing an address. A full brief can add language, genre focus, agent names and refresh cadence, delivered as a weekly-refreshed sheet.</p>
+<footer><span>veyqo · custom public-web data workflows</span><span><a href="/">veyqo.clawpyr.com</a></span></footer>
+</div></body></html>
