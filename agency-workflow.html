@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Veyqo — one agency workflow, running itself</title>
-<meta name="description" content="Veyqo maps one recurring agency workflow — reporting, onboarding or approvals — and builds the automation around how your team already works. Five-day pilot.">
+<title>Veyqo — a scoped $250 agency workflow pilot</title>
+<meta name="description" content="Free 15-minute fit conversation, then a scoped $250 agency workflow pilot. Up to four implementation hours; five working days after agreed inputs and access arrive.">
 <style>
   :root{
     --paper:#f4f1e8; --ink:#14261c; --forest:#1c3a2a; --moss:#5d7463;
@@ -21,15 +21,16 @@
   .nav a{font-family:"Courier New",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--moss)}
   .nav a:hover{color:var(--ink)}
   .hero{padding-top:84px;padding-bottom:56px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero>*,.offer>*{min-width:0}
   .eyebrow{font-family:"Courier New",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--moss);margin-bottom:18px}
   h1{font-size:clamp(42px,5.2vw,72px);line-height:.98;letter-spacing:-.035em;margin:0 0 24px;font-weight:400}
   h1 em{font-style:italic;color:var(--forest)}
   .lede{font-size:19px;max-width:34em;color:#33463a;margin:0 0 30px}
-  .cta{display:inline-flex;align-items:center;gap:12px;background:var(--forest);color:var(--paper);text-decoration:none;padding:15px 22px;font-family:"Courier New",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--forest)}
+  .cta{display:inline-flex;align-items:center;gap:12px;max-width:100%;background:var(--forest);color:var(--paper);text-decoration:none;padding:15px 22px;font-family:"Courier New",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--forest)}
   .cta:hover{background:var(--ink)}
   .cta span{color:var(--lime);font-size:15px;line-height:1}
-  .micro{font-family:"Courier New",monospace;font-size:11px;letter-spacing:.06em;color:var(--moss);margin-top:14px}
-  .ascii{background:var(--forest);color:#d9ffb0;padding:22px;border:1px solid var(--forest);font-family:"Courier New",monospace;font-size:10.5px;line-height:1.55;white-space:pre;overflow:auto}
+  .micro{font-family:"Courier New",monospace;font-size:13px;letter-spacing:.03em;color:var(--moss);margin-top:14px}
+  .ascii{background:var(--forest);color:#d9ffb0;padding:22px;border:1px solid var(--forest);font-family:"Courier New",monospace;font-size:clamp(7px,1vw,10.5px);line-height:1.55;white-space:pre;overflow:auto}
   .ascii .dim{color:#7fa184}
   .ascii .hi{color:var(--lime)}
   .rule{height:1px;background:var(--line);margin:0}
@@ -55,6 +56,8 @@
   .amount small{font-size:14px;font-family:"Courier New",monospace;letter-spacing:.08em;color:#c9d8cc;display:block;margin-top:8px}
   .offer .cta{background:var(--lime);color:var(--ink);border-color:var(--lime)}
   .offer .cta:hover{background:#d3ff9a}
+  .offer .cta span{color:var(--ink)}
+  .offer .limits{grid-column:1/-1;border-top:1px solid #5d7463;padding-top:20px;font-size:14px;max-width:none}
   .note{border-left:2px solid var(--lime);padding:2px 0 2px 18px;color:#3d5044;font-size:15px;max-width:46em}
   footer{border-top:1px solid var(--line);padding:30px 0 46px;font-family:"Courier New",monospace;font-size:11px;letter-spacing:.08em;color:var(--moss);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
   @media (max-width:860px){
@@ -66,7 +69,7 @@
     section{padding:52px 0}
   }
   @media (max-width:480px){
-    .ascii{font-size:8.5px;line-height:1.5;padding:16px}
+    .ascii{font-size:clamp(7px,2.2vw,8.5px);line-height:1.5;padding:16px}
     .nav{gap:10px}
     .nav a{font-size:9.5px;letter-spacing:.06em}
   }
@@ -77,7 +80,7 @@
 <header>
   <div class="wrap nav">
     <div class="brand">Veyqo</div>
-    <nav><a href="#workflows">Workflows</a> &nbsp; <a href="#pilot">Pilot</a> &nbsp; <a href="mailto:hello@clawpyr.com?subject=Workflow%20audit">Get in touch</a></nav>
+    <nav><a href="#workflows">Workflows</a> &nbsp; <a href="#pilot">Pilot</a> &nbsp; <a href="mailto:hello@clawpyr.com?subject=Workflow%20fit%20conversation">Email us</a></nav>
   </div>
 </header>
 
@@ -86,24 +89,25 @@
     <div>
       <div class="eyebrow">For small agencies · 2–20 people</div>
       <h1>Your agency runs on five tabs and a <em>group chat.</em></h1>
-      <p class="lede">We map one workflow your team repeats every week — client reporting, onboarding, or approvals — and build the automation around how you already work. Not another dashboard nobody opens.</p>
-      <a class="cta" href="mailto:hello@clawpyr.com?subject=Workflow%20audit&body=Hi%20Veyqo%2C%0A%0AThe%20workflow%20that%20costs%20us%20the%20most%20time%20is%3A%0A%0AHow%20it%20works%20today%3A%0A%0AWho%20owns%20it%3A%0A">Book a 15-minute workflow audit <span>→</span></a>
-      <div class="micro">No deck. No discovery call marathon. One workflow, one owner, one measured result.</div>
+      <p class="lede">Start with a free 15-minute fit conversation about one recurring task. If it fits, we'll agree a $250 pilot to build one small internal automation around how your team works.</p>
+      <a class="cta" href="mailto:hello@clawpyr.com?subject=Free%20workflow%20fit%20conversation&body=Hi%20Veyqo%2C%0A%0AI%27d%20like%20to%20arrange%20a%20free%2015-minute%20fit%20conversation.%0A%0AOur%20workflow%3A%0A%0AHow%20it%20works%20today%3A%0A%0AWho%20owns%20it%3A%0A">Email for a free fit conversation <span>→</span></a>
+      <div class="micro">Opens an email draft for you to send, not a booking. Paid scope agreed before payment.</div>
     </div>
-    <div class="ascii" aria-label="Illustration: client updates, assets and approvals scattered across tools, resolving into one operations sheet.">
+    <div class="ascii" role="img" aria-label="Illustrative workflow concept, not an existing implementation: scattered inputs resolving into an internal report.">
+<span class="dim">ILLUSTRATIVE CONCEPT · NOT A LIVE SYSTEM</span>
 <span class="dim">CLIENT      ASSETS       APPROVAL      REPORT</span>
    │            │             │            │
    ├─ email ────┼─ drive ─────┼─ slack ────┼─ sheets
    │            │             │            │
    ▼            ▼             ▼            ▼
 <span class="hi">┌──────────────────────────────────────────┐</span>
-<span class="hi">│  ONE WORKFLOW · ONE OWNER · ONE TRUTH   │</span>
+<span class="hi">│  ONE WORKFLOW · ONE INTERNAL OUTPUT    │</span>
 <span class="hi">└──────────────────────────────────────────┘</span>
    │            │             │            │
    └────────────┴──────┬──────┴────────────┘
                        ▼
-              <span class="hi">weekly report, ready</span>
-              <span class="dim">no chasing, no copy-paste</span>
+              <span class="hi">internal report draft</span>
+              <span class="dim">owner reviews the output</span>
     </div>
   </div>
 
@@ -112,23 +116,23 @@
   <section id="workflows">
     <div class="wrap">
       <div class="eyebrow">Where the week disappears</div>
-      <h2>Three workflows we can fix first.</h2>
-      <p class="sub">Pick the one that causes the most chasing. If it isn't on this list, the audit will find the real one.</p>
+      <h2>Three places to start.</h2>
+      <p class="sub">Illustrative examples, not existing implementations. The pilot covers one approved input workflow and one internal output, subject to fit.</p>
       <div class="grid3">
         <article class="card">
           <div class="num">01 / Reporting</div>
           <h3>The Friday scramble</h3>
-          <p>Numbers pulled from three platforms, pasted into a deck, checked twice, sent late. The recurring version is a sheet that fills itself and a summary that lands on time.</p>
+          <p>Numbers copied into the same report each week. A possible pilot: turn one agreed export into an internal summary sheet for the owner to review.</p>
         </article>
         <article class="card">
           <div class="num">02 / Onboarding</div>
           <h3>The first two weeks</h3>
-          <p>Brief, access, assets, kickoff, folder structure — each step remembered by a different person. The recurring version is a checklist that creates the next step and tells the client what happens next.</p>
+          <p>Briefs and assets arrive in different places. A possible pilot: turn one approved intake export into an internal checklist for the project owner.</p>
         </article>
         <article class="card">
           <div class="num">03 / Approvals</div>
           <h3>The version nobody approved</h3>
-          <p>Feedback in email, comments in Figma, a yes in Slack. The recurring version is one approval record: what was approved, by whom, when, and which file is live.</p>
+          <p>Feedback in email, comments in Figma, a yes in Slack. A possible pilot: format one supplied approval log into an internal review record.</p>
         </article>
       </div>
     </div>
@@ -137,23 +141,23 @@
   <section style="padding-top:0">
     <div class="wrap">
       <div class="eyebrow">How the pilot works</div>
-      <h2>Five days. One workflow. Measured.</h2>
-      <p class="sub">We don't arrive with a platform. We arrive with questions, then build the smallest system that removes the manual step.</p>
+      <h2>A small build, with clear boundaries.</h2>
+      <p class="sub">Five working days is the turnaround after agreed inputs and access arrive, not five full days of labour. Implementation is capped at four hours.</p>
       <div class="steps">
         <div class="step">
-          <div class="n">DAY 1</div>
-          <h3>Watch it happen</h3>
-          <p>A 30-minute walkthrough of the real workflow, with the person who owns it. We record where the handoffs, duplicates and waiting time actually are.</p>
+          <div class="n">01 / FREE FIT CONVERSATION</div>
+          <h3>Check the fit</h3>
+          <p>In 15 minutes, discuss the task with its owner. Before payment, agree the inputs, output, finite test fixture and acceptance checks. Work beyond the cap gets a separate quote first.</p>
         </div>
         <div class="step">
-          <div class="n">DAYS 2–4</div>
+          <div class="n">02 / PAID PILOT</div>
           <h3>Build the smallest version</h3>
-          <p>One trigger, one owner, one output. Integrations use tools you already pay for; anything that needs a new licence is flagged before it is bought.</p>
+          <p>One approved input workflow, one owner, one internal output. Start with client-supplied exports or a read-only test before considering production access. Never send passwords by email.</p>
         </div>
         <div class="step">
-          <div class="n">DAY 5</div>
-          <h3>Run it live, then measure</h3>
-          <p>We run the workflow with real work, fix what breaks, and leave a before/after record: steps removed, minutes saved, failure points still open.</p>
+          <div class="n">03 / TEST &amp; HANDOVER</div>
+          <h3>Check the agreed output</h3>
+          <p>Test against the agreed finite fixture and acceptance checks. Receive the build, written run instructions and known limitations, plus one revision within the agreed scope.</p>
         </div>
       </div>
     </div>
@@ -164,15 +168,16 @@
       <div class="offer">
         <div>
           <div class="price">Paid pilot</div>
-          <div class="amount">$250<small>one workflow · five working days · fixed scope</small></div>
-          <p>Includes the audit, the build, one live run, and a written handover. If the workflow cannot be improved, we say so before you pay the build fee.</p>
+          <div class="amount">$250<small>fixed scope · up to four implementation hours</small></div>
+          <p>One approved input workflow, one owner and one internal output. Includes the agreed finite test fixture, written handover and one in-scope revision. Five working days after agreed inputs and access arrive.</p>
         </div>
         <div>
-          <a class="cta" href="mailto:hello@clawpyr.com?subject=Five-day%20workflow%20pilot&body=Hi%20Veyqo%2C%0A%0AThe%20workflow%20we%20want%20to%20fix%3A%0A%0AThe%20person%20who%20owns%20it%3A%0A%0AWhat%20happens%20today%3A%0A">Start with the workflow <span>→</span></a>
-          <div class="micro" style="color:#c9d8cc">Or reply to the email that brought you here.</div>
+          <a class="cta" href="mailto:hello@clawpyr.com?subject=Workflow%20pilot%20scope%20request&body=Hi%20Veyqo%2C%0A%0AI%27d%20like%20to%20discuss%20scope%20for%20the%20%24250%20pilot.%0A%0AOur%20workflow%3A%0A%0AThe%20owner%3A%0A%0AAvailable%20exports%20or%20test%20inputs%3A%0A">Email to discuss scope <span>→</span></a>
+          <div class="micro" style="color:#c9d8cc">Send the email draft to request a conversation. Scope and any larger quote agreed before payment.</div>
         </div>
+        <p class="limits">Excluded unless separately quoted: licence/API fees, migrations, sensitive data, automated client communications, hosting, ongoing operation and support.</p>
       </div>
-      <p class="note" style="margin-top:34px">We don't claim to know your process before we've seen it. The audit starts with how the work actually happens, including the parts that aren't in anyone's job description.</p>
+      <p class="note" style="margin-top:34px">This is a custom pilot, not an existing product. We agree what the test will demonstrate; time savings and ongoing reliability are not guaranteed.</p>
     </div>
   </section>
 </main>
